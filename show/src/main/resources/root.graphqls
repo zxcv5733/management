@@ -1,0 +1,62 @@
+type Query {
+    findBooks: [Book]
+    findBook(id:ID!): Book
+    findByCategory: [NewsDxts]
+    findByUid(id:ID!): NewsDxts
+    findByTitle(title:ID!): [NewsDxts]
+}
+
+type Book {
+    id: Int
+    name: String
+    author: Author
+    publisher: String
+}
+
+type Author {
+    id: Int
+    name: String
+    age: Int
+}
+
+input AuthorInput{
+    name: String!
+    age: String!
+
+}
+
+type Mutation  {
+    createAuthor(author: AuthorInput): Author!
+    updateAuthor(id: ID!, author: AuthorInput): Author!
+    deleteAuthor(id: ID!): String
+}
+
+type NewsDxts {
+    id:String
+    addedDate:String
+    author: String
+    category: String
+    images: [NewsImages]
+    content: String
+    importance: String
+    newsKeyWord: String
+    originalLabel: String
+    postDate: String
+    reliability: String
+    score: String
+    site: String
+    siteId: String
+    title: String
+    uid: String
+    url: String
+    tags: String
+    files: String
+    hotWord: String
+    language: String
+    ideas: String
+}
+
+type NewsImages {
+    image_url: String
+}
+

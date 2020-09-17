@@ -7,6 +7,10 @@
     <groupId>com.ld.edu</groupId>
     <artifactId>management</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>login</module>
+        <module>show</module>
+    </modules>
     <packaging>pom</packaging>
 
     <!--统一的管理jar包版本-->
